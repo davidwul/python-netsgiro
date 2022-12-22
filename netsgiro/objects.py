@@ -121,7 +121,7 @@ class Transmission:
     def to_ocr(self) -> str:
         """Convert the transmission to an OCR string."""
         lines = [record.to_ocr() for record in self.to_records()]
-        return '\n'.join(lines)
+        return '\r\n'.join(lines)
 
     def to_records(self) -> Iterable['Record']:
         """Convert the transmission to a list of records."""
